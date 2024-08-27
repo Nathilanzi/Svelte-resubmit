@@ -39,3 +39,62 @@
     </nav>
 </header>
   
+  <style>
+    .header {
+      background-color: #1a202c;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      height: 40px;
+      margin-right: 0.5rem;
+    }
+    .brand-name {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      flex-direction: column;
+      background-color: #2d3748;
+      border-radius: 4px;
+    }
+    .menu.show {
+      display: flex;
+    }
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-item {
+      padding: 0.5rem 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    .menu-item:hover {
+      background-color: #4a5568;
+    }
+  </style>
+  
