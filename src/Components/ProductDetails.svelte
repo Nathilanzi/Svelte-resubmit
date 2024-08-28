@@ -46,3 +46,19 @@
         Display product details if the product data is available.
         Includes product image, title, price, category, rating, and description.
     -->
+    <div class="product-detail">
+        <img src={product.image} alt={product.title} class="product-image" />
+        <h1 class="product-title">{product.title}</h1>
+        <p class="product-price">${product.price}</p>
+        <p class="product-category">Category: {product.category}</p>
+        <p class="product-rating">Rating: {product.rating.rate} (Based on {product.rating.count} reviews)</p>
+        <p class="product-description">{product.description}</p>
+        <a href="#/" class="back-button">Back to Products</a>
+    </div>
+{:else}
+    <!--
+        Display a loading message while the product data is being fetched.
+    -->
+    <p>Loading...</p>
+{/if}
+
