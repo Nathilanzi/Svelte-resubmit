@@ -24,3 +24,25 @@
      * @function fetchProduct
      * @returns {Promise<void>} A promise that resolves when the product is fetched.
      */
+    const fetchProduct = async () => {
+        try {
+            const res = await fetch(`https://fakestoreapi.com/products/${params.id}`);
+            if (res.ok) {
+                product = await res.json();
+            } else {
+                console.error('Failed to fetch product');
+            }
+        } catch (error) {
+            console.error('Error fetching product:', error);
+        }
+    };
+
+    // Fetch product data when the component is mounted
+    onMount(fetchProduct);
+</script>
+
+{#if product}
+    <!--
+        Display product details if the product data is available.
+        Includes product image, title, price, category, rating, and description.
+    -->
