@@ -70,3 +70,24 @@
     const handleSortChange = (event) => {
         sortOrder = event.target.value;
     };
+
+    /**
+     * Reactive statement that filters and sorts the products based on the selected category and sort order.
+     * The `filteredProducts` variable is updated automatically whenever `products`, `selectedCategory`, or `sortOrder` change.
+     * 
+     * @type {Array<Object>}
+     */
+    $: filteredProducts = products
+        .filter(product => selectedCategory ? product.category === selectedCategory : true)
+        .sort((a, b) => sortOrder === 'low-to-high' ? a.price - b.price : sortOrder === 'high-to-low' ? b.price - a.price : 0);
+
+    /**
+     * Lifecycle method that runs when the component is mounted.
+     * It calls `fetchProducts` and `fetchCategories` to initialize the product list and categories.
+     */
+    onMount(() => {
+        fetchProducts();
+        fetchCategories();
+    });
+</script>
+
