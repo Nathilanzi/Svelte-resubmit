@@ -18,3 +18,16 @@
       '/product/:id': ProductDetails, // Dynamic route for product details
   };
 </script>
+
+<main class="app-container">
+  <Header />
+  <Router {routes} />
+</main>
+
+<style>
+  .app-container {
+      font-family: Arial, sans-serif;
+      color: #333;
+      /* padding: 0 1rem; */
+  }
+</style>
