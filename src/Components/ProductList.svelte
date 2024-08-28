@@ -91,3 +91,31 @@
     });
 </script>
 
+<div class="filters">
+    <select on:change={handleCategoryChange} class="filter-select">
+        <option value=''>All Categories</option>
+        {#each categories as category}
+            <option value={category}>{category}</option>
+        {/each}
+    </select>
+
+    <select on:change={handleSortChange} class="filter-select">
+        <option value=''>Default</option>
+        <option value='low-to-high'>Price: Low to High</option>
+        <option value='high-to-low'>Price: High to Low</option>
+    </select>
+</div>
+
+<div class="product-grid">
+    {#each filteredProducts as product}
+        <a href={`#/product/${product.id}`} class="product-card">
+            <img src={product.image} alt={product.title} class="product-image" />
+            <h2 class="product-title">{product.title}</h2>
+            <p class="product-price">${product.price}</p>
+            <p class="product-category">Category: {product.category}</p>
+            <p class="product-rating">Rating: {product.rating.rate} (Based on {product.rating.count} reviews)</p>
+        <p class="product-description">{product.description}</p>
+        </a>
+    {/each}
+</div>
+  
