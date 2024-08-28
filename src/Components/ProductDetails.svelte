@@ -62,3 +62,46 @@
     <p>Loading...</p>
 {/if}
 
+<style>
+    .product-detail {
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 1rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .product-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+    }
+    .product-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .product-price {
+        font-size: 1.25rem;
+        color: #38a169;
+        font-weight: bold;
+    }
+    .product-category {
+        color: #718096;
+        margin-bottom: 1rem;
+    }
+    .product-rating {
+        color: #ecc94b;
+        margin-bottom: 1rem;
+    }
+    .product-description {
+        color: #4a5568;
+        margin-bottom: 1.5rem;
+    }
+    .back-button {
+        color: #3182ce;
+        text-decoration: none;
+    }
+</style>
